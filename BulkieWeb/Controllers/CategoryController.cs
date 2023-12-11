@@ -76,7 +76,7 @@ namespace BulkieWeb.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-
+            
         }
 
         public IActionResult Delete(int? id)
