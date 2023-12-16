@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BulkieWeb.Migrations
+namespace Bulkie.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryTableToDb : Migration

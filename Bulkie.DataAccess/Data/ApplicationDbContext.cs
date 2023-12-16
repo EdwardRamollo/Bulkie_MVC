@@ -1,7 +1,7 @@
-﻿using BulkieWeb.Models;
+﻿using Bulkie.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BulkieWeb.Data
+namespace Bulkie.DataAccess.Data
 {
     /* Basic configuration for entity framework */
     public class ApplicationDbContext:DbContext

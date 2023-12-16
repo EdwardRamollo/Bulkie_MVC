@@ -1,5 +1,6 @@
-﻿using BulkieWeb.Data;
-using BulkieWeb.Models;
+﻿
+using Bulkie.DataAccess.Data;
+using Bulkie.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkieWeb.Controllers
