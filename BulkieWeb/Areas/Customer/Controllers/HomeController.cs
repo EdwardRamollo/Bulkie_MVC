@@ -3,8 +3,9 @@ using Bulkie.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BulkieWeb.Controllers
+namespace BulkieWeb.Areas.Customer.Controllers
 {
+    [Area("Customer")] // tell this controller that it belongs to the Customer Area
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
