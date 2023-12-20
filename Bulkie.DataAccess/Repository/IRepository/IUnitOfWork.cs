@@ -10,6 +10,7 @@ namespace Bulkie.DataAccess.Repository.IRepository
     {
         /* In here we will have all the repositories */
         ICategoryRepository Category { get; }
+        IProductRepository Product { get; }
 
         void Save();
     }
