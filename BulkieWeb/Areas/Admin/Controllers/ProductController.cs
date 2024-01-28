@@ -1,6 +1,8 @@
 ﻿using Bulkie.DataAccess.Repository.IRepository;
 using Bulkie.Models;
 using Bulkie.Models.ViewModels;
+using Bulkie.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -10,7 +12,8 @@ namespace BulkieWeb.Areas.Admin.Controllers
     /* Find and Replace in VS Ctrl+Shift+F */
    
         [Area("Admin")] // tell a controller this controller that it belongs to the Admin Area
-        public class ProductController : Controller
+    [Authorize(Roles = SD.Role_Admin)] // Only the Admin can access the Controllers action methods. You can also apply this manually on top of individual action methods
+    public class ProductController : Controller
         {
             /* Replace DBContext with Product Repository*/
             //private ApplicationDbContext _db; -- we do not need to use this, we can access the category repository.

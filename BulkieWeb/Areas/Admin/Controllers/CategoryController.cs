@@ -2,6 +2,8 @@
 using Bulkie.DataAccess.Data;
 using Bulkie.DataAccess.Repository.IRepository;
 using Bulkie.Models;
+using Bulkie.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 using static System.Net.Mime.MediaTypeNames;
@@ -9,6 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace BulkieWeb.Areas.Admin.Controllers
 {
     [Area("Admin")] // tell a controller this controller that it belongs to the Admin Area
+    [Authorize(Roles =SD.Role_Admin)] // Only the Admin can access the Controllers action methods. You can also apply this manually on top of individual action methods
     public class CategoryController : Controller
     {
         /* Replace DBContext with Category Repository*/
