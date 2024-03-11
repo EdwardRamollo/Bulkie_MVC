@@ -161,12 +161,12 @@ namespace Bulkie.DataAccess.Repository.IRepository
           T - Category or any other generic model on which we want to perform the CRUD operation or rather we want to interact with the DBContext
 
         */ 
-        IEnumerable<T> GetAll(string? includeProperties = null); // we need to retrieve all the category(or any other model) where we are displaying all of them.
+        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null); // we need to retrieve all the category(or any other model) where we are displaying all of them.
         
         // The reason we will not use Find is because that only works on the id. But if you want some other condition to get on record, you can pass that
         // using Linq operator. Basically in parameter we will be getting a Linq operation like this -- (u => u.Id==id). So for that we pass as parameter
         // 'Expression<Func<T, bool>>'.
-        T GetFirstOrDefault(Expression<Func<T,bool>> filter, string? includeProperties = null); // what we will be getting is a function, and the out result will be a boolean. We can call
+        T GetFirstOrDefault(Expression<Func<T,bool>> filter, string? includeProperties = null, bool tracked = false); // what we will be getting is a function, and the out result will be a boolean. We can call
                                                               // We can call that as filter when we are fetching an individual record.
 
         void add(T entity);

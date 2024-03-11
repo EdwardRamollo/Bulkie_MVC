@@ -11,6 +11,12 @@ namespace Bulkie.DataAccess.Repository.IRepository
         /* In here we will have all the repositories */
         ICategoryRepository Category { get; }
         IProductRepository Product { get; }
+        ICompanyRepository Company { get; }
+        IShoppingCartRepository ShoppingCart { get; }
+
+        IApplicationUserRepository ApplicationUser { get; }
+        IOrderDetailRepository OrderDetail { get; }
+        IOrderHeaderRepository OrderHeader { get; }
 
         void Save();
     }
