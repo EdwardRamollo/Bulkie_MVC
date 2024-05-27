@@ -8,9 +8,8 @@ namespace Bulkie.Models
         [Key]
         public int Id { get; set; }
         [Required]
-
-        [DisplayName("Category Name")]
         [MaxLength(30)]
+        [DisplayName("Category Name")]
         public string Name { get; set; }
 
         [DisplayName("Display Order")]

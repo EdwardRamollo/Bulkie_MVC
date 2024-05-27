@@ -36,7 +36,7 @@ namespace Bulkie.DataAccess.Migrations
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "CategoryId",
-                value: 8);
+                value: 1);
 
             migrationBuilder.UpdateData(
                 table: "Products",
@@ -57,7 +57,7 @@ namespace Bulkie.DataAccess.Migrations
                 keyColumn: "Id",
                 keyValue: 6,
                 column: "CategoryId",
-                value: 8);
+                value: 3);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",

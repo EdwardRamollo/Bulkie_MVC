@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bulkie.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240217130250_addSessionIdToOrderHeader")]
+    [Migration("20240415044316_addSessionIdToOrderHeader")]
     partial class addSessionIdToOrderHeader
     {
         /// <inheritdoc />
