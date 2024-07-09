@@ -144,7 +144,7 @@ namespace BulkieWeb.Areas.Customer.Controllers
             {
                 // It is a regular customer account and we need to capture payment
                 // stripe logic
-                var domain = "https://localhost:7056/";
+                var domain = Request.Scheme+ "://"+ Request.Host.Value +"/"; // Get the domain dynamically. If it is a localhost, it will get that. If it is a website it will get that.
                 var options = new Stripe.Checkout.SessionCreateOptions
                 {
                     SuccessUrl = domain+ $"customer/card/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}", //pass id that we will get using orderheader
