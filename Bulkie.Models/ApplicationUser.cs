@@ -21,6 +21,9 @@ namespace Bulkie.Models
         public int? CompanyId { get; set; } // Navigation property
         [ForeignKey("CompanyId")]
         [ValidateNever]
-        public Company Company { get; set; }
+        public Company? Company { get; set; }
+        /*Add a column here, but we do not want to add that to the Database.*/
+        [NotMapped] //Will make sure that Role is not post to the Database
+        public string Role {  get; set; }
     }
 }

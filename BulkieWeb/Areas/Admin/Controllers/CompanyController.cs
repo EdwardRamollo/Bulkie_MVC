@@ -31,7 +31,7 @@ namespace BulkieWeb.Areas.Admin.Controllers
                 //List<Company> categories = _db.Categories.ToList();
                 List<Company> companies = _unitOfWork.Company.GetAll().ToList();
                 return View(companies);
-        }
+            }
 
             public IActionResult Upsert(int? id)
             {

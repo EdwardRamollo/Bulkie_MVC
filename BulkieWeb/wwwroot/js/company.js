@@ -9,11 +9,11 @@ function loadDataTable() {
         "ajax": { url:'/admin/company/getall'},
         // data: data, -- because its an ajax call, data will be called /passed automatically
         "columns": [
-            { data: 'name', "width": "15%" },
-            { data: 'streetAddress', "width": "15%" },
-            { data: 'city', "width": "15%" },
-            { data: 'state', "width": "15%" },
-            { data: 'phoneNumber', "width": "15%" },
+            { "data": 'name', "width": "15%" },
+            { "data": 'streetAddress', "width": "15%" },
+            { "data": 'city', "width": "15%" },
+            { "data": 'state', "width": "15%" },
+            { "data": 'phoneNumber', "width": "15%" },
             {
                 data: 'id',
                 "render": function (data/* basically the id */) {
